@@ -1,9 +1,11 @@
 package com.fayimora.signupform;
 
+import java.io.Serializable;
+
 /**
  * Created by fayimora on 31/05/15.
  */
-public class User {
+public class User implements Serializable {
     private String mUsername;
     private String mPassword;
 

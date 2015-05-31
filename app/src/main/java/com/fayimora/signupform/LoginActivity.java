@@ -1,5 +1,6 @@
 package com.fayimora.signupform;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -36,9 +37,13 @@ public class LoginActivity extends ActionBarActivity {
                 String username = mUsernameInput.getText().toString();
                 String password = mPasswordInput.getText().toString();
                 String confirmPassword = mConfirmPasswordInput.getText().toString();
-                if(password.equals(confirmPassword))
+                if(password.equals(confirmPassword)) {
                     Log.d(TAG, "Password matches");
-                else
+                    User u = new User(username, password);
+                    Intent i = new Intent(LoginActivity.this, HomeActivity.class);
+                    i.putExtra("USER", u);
+                    startActivity(i);
+                }else
                     Log.d(TAG, "Passwords don't match");
             }
         });

@@ -16,4 +16,5 @@
     <!-- confirm password field-->
     <string name="confirm_password_label">Confirm Password:</string>
     <string name="confirm_password_input_hint">Please re-enter your password</string>
+    <string name="title_activity_home">HomeActivity</string>
 </resources>
